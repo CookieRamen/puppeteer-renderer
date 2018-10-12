@@ -11,7 +11,7 @@ class Renderer {
     const { timeout, waitUntil } = options
     const page = await this.browser.newPage()
     await page.goto(url, {
-      timeout: Number(timeout) || 30 * 1000,
+      timeout: Number(timeout) || 120 * 1000,
       waitUntil: waitUntil || 'networkidle2',
     })
     return page
